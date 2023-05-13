@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 import { useState } from 'react';
 
-const Header = () => {
+const Header2 = () => {
   const [leftMenu, setLeftMenu] = useState(false);
 
   return (
@@ -24,10 +24,7 @@ const Header = () => {
           <nav className={`nav nav-1 ${leftMenu ? 'active' : ''}`}>
             <ul className="flex gap-5 items-center">
               <li className="flex items-center justify-between">
-                <Link
-                  className="text-xl uppercase  font-normal text-[#DACD57]"
-                  href={'/'}
-                >
+                <Link className="text-xl uppercase  font-normal " href={'/'}>
                   Home
                 </Link>
                 <div
@@ -39,7 +36,7 @@ const Header = () => {
               </li>
               <li>
                 <Link
-                  className="text-xl uppercase  font-normal "
+                  className="text-xl text-[#DACD57] uppercase  font-normal "
                   href={'/about'}
                 >
                   About
@@ -51,23 +48,7 @@ const Header = () => {
             <div className="menu" onClick={() => setLeftMenu(true)}>
               <Image width={26} height={100} src={'/menu-0.png'} />
             </div>
-            <Link href={'/'}>
-              {' '}
-              <Image
-                alt="logo"
-                src={'/logo.png'}
-                className="hidden lg:block"
-                width={300}
-                height={38}
-              />
-              <Image
-                alt="logo"
-                src={'/logo.png'}
-                className=" lg:hidden"
-                width={100}
-                height={38}
-              />
-            </Link>
+            <Image alt="logo" src={'/logo.png'} width={300} height={38} />
           </div>
           <div className={`nav nav-2 ${leftMenu ? 'active' : ''}`}>
             <ul className="flex gap-5 items-center">
@@ -93,4 +74,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Header2;
